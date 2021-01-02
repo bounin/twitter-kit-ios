@@ -146,6 +146,7 @@ static TWTRTwitter *sharedTwitter;
         [NSException raise:TWTRInvalidInitializationException format:@"[%@] %@ called with empty consumer key or secret.", [self class], NSStringFromSelector(_cmd)];
     }
 
+    [TWTRResourcesUtil setKitClass:self.class];
     [self ensureResourcesBundleExists];
     [self setupAPIServiceConfigs];
 
@@ -383,7 +384,7 @@ static TWTRTwitter *sharedTwitter;
     BOOL isSSOBundle = [self.mobileSSO isSSOWithSourceApplication:sourceApplication];
     BOOL isWeb = [self.mobileSSO isWebWithSourceApplication:sourceApplication];
 
-    if (isSSOBundle) {
+    if (isSSOBundle || sourceApplication == nil) {
         [self.mobileSSO processRedirectURL:url];
     } else if (isWeb) {
         BOOL isTokenValid = [self.mobileSSO verifyOauthTokenResponsefromURL:url];

@@ -25,6 +25,7 @@ NSString *const TWTRResourcesUtilLanguageType = @"lproj";
 NSString *const TWTRResourcesUtilFallbackLanguage = @"en";
 NSString *const TWTRResourcesUtilDefaultValue = @"com.twitter.resourcesutil.default_value";
 static NSString *kitVersion;
+static Class kitClass;
 
 @implementation TWTRResourcesUtil
 
@@ -35,7 +36,7 @@ static NSString *kitVersion;
 
     // Doing [self class] here so it works across targets. Otherwise kitBundle might not be what
     // you expect
-    NSBundle *bundle1 = [NSBundle bundleForClass:[self class]];
+    NSBundle *bundle1 = [NSBundle bundleForClass:kitClass?:[self class]];
     NSBundle *bundle = [NSBundle bundleWithPath:[bundle1 pathForResource:bundleName ofType:bundleType]];
     return bundle;
 }
@@ -148,6 +149,10 @@ static NSString *kitVersion;
 + (void)setKitVersion:(NSString *)version
 {
     kitVersion = version;
+}
+
++ (void)setKitClass:(Class)class {
+    kitClass = class;
 }
 
 + (NSString *)userAgentFromKitBundle

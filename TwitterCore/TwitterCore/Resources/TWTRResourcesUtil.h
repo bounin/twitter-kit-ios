@@ -99,6 +99,11 @@ FOUNDATION_EXTERN NSString *const TWTRResourcesUtilLanguageType;
  */
 + (void)setKitVersion:(nullable NSString *)version;
 
+/**
+ * Set the main class of the parent Kit (Twitter Kit or Digits) to find resource bundle
+ */
++ (void)setKitClass:(nullable Class)class;
+
 @end
 
 NS_ASSUME_NONNULL_END
