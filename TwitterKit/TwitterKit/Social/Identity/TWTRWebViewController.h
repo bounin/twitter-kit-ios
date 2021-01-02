@@ -22,8 +22,9 @@
 #import <UIKit/UIKit.h>
 
 @class TWTRWebViewController;
+@import WebKit.WKNavigationAction;
 
-typedef BOOL (^TWTRWebViewControllerShouldLoadCompletion)(UIViewController *controller, NSURLRequest *request, UIWebViewNavigationType navigationType);
+typedef BOOL (^TWTRWebViewControllerShouldLoadCompletion)(UIViewController *controller, NSURLRequest *request, WKNavigationType navigationType);
 typedef void (^TWTRWebViewControllerCancelCompletion)(TWTRWebViewController *webViewController);
 typedef void (^TWTRWebViewControllerHandleError)(NSError *error);
 
