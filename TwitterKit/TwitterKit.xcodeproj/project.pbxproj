@@ -6,6 +6,31 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		8C2EC3FA23AB59240092E1B3 /* Framework-static */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8C2EC3FC23AB59240092E1B3 /* Build configuration list for PBXAggregateTarget "Framework-static" */;
+			buildPhases = (
+				8C2EC3FB23AB59240092E1B3 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Framework-static";
+			productName = Framework;
+		};
+		8C4035FF23417D7100B914EF /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8C40360023417D7100B914EF /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				8C40360523417DE400B914EF /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		18FE0754191AAC3500485617 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FE0753191AAC3500485617 /* UIKit.framework */; };
 		2002E6031E5F5BDA007AF951 /* TWTRTweetDelegationHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2002E6021E5F5BDA007AF951 /* TWTRTweetDelegationHelperTest.m */; };
@@ -371,6 +396,8 @@
 		7B154E6E19D33A5300B6B64C /* TWTRBezierPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B154E6C19D33A5300B6B64C /* TWTRBezierPaths.m */; };
 		7B154E7219D34B4700B6B64C /* TWTRBirdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B154E7019D34B4700B6B64C /* TWTRBirdView.m */; };
 		7B964455199BDF27002117B5 /* TWTRKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B964454199BDF27002117B5 /* TWTRKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C0043682545450900922A4B /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4008831B1D033C0091E4D3 /* TwitterCore.framework */; };
+		8C4035FA234094B000B914EF /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4035F7234094B000B914EF /* WebKit.framework */; };
 		9236048719F18F5F00532281 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9236048619F18F5F00532281 /* CoreData.framework */; };
 		92B9AC9119DF359D00E8BC68 /* UserWithEmailResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 92B9AC9019DF359D00E8BC68 /* UserWithEmailResponse.json */; };
 		92B9AC9319DF388E00E8BC68 /* UserWithEmptyEmailResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 92B9AC9219DF388E00E8BC68 /* UserWithEmptyEmailResponse.json */; };
@@ -555,7 +582,6 @@
 		DB22426C1C3F22AB008A6DC7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9489E1A1930B95000E5C4F7 /* Social.framework */; };
 		DB22426D1C3F22B3008A6DC7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370F2F1819B6980E00A51872 /* CoreText.framework */; };
 		DB22426E1C3F22BC008A6DC7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370F2F1D19B698D400A51872 /* QuartzCore.framework */; };
-		DB22427F1C3F24A2008A6DC7 /* libTwitterCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D40087F1B1D033C0091E4D3 /* libTwitterCore.a */; };
 		DB2242801C3F24AF008A6DC7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9489E181930B93500E5C4F7 /* Security.framework */; };
 		DB2590821BA8B0F7008A9380 /* TwitterSocialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7FCB5A1AE59D5A008F41C9 /* TwitterSocialTests.m */; };
 		DB28A4D71CD419B60067FF72 /* VineTweetV13.json in Resources */ = {isa = PBXBuildFile; fileRef = DB28A4D11CD419B10067FF72 /* VineTweetV13.json */; };
@@ -678,6 +704,13 @@
 			remoteGlobalIDString = A97654E418E0B29B00E25169;
 			remoteInfo = "TwitterKit-static";
 		};
+		8C00431E25453EA000922A4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D4008771B1D033C0091E4D3 /* TwitterCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D5A92451AAA8D600039EFCC;
+			remoteInfo = TwitterCore;
+		};
 		9D40087E1B1D033C0091E4D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9D4008771B1D033C0091E4D3 /* TwitterCore.xcodeproj */;
@@ -698,13 +731,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 9D5A92461AAA8D600039EFCC;
 			remoteInfo = "TwitterCore-dynamic";
-		};
-		9D40088B1B1D059D0091E4D3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9D4008771B1D033C0091E4D3 /* TwitterCore.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9D5A92201AAA89730039EFCC;
-			remoteInfo = "TwitterCore-static";
 		};
 		BFE8397E1ADF23700035CBA1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1092,6 +1118,7 @@
 		7B964454199BDF27002117B5 /* TWTRKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = TWTRKit.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		7B96448A199BE365002117B5 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterKitResources.bundle; sourceTree = "<group>"; };
 		7BEB12C119AFCBC400A86786 /* TwitterKit-module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = "TwitterKit-module.modulemap"; sourceTree = "<group>"; };
+		8C4035F7234094B000B914EF /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9236048619F18F5F00532281 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		92B9AC9019DF359D00E8BC68 /* UserWithEmailResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; lineEnding = 0; path = UserWithEmailResponse.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		92B9AC9219DF388E00E8BC68 /* UserWithEmptyEmailResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; lineEnding = 0; path = UserWithEmptyEmailResponse.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
@@ -1382,6 +1409,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C0043682545450900922A4B /* TwitterCore.framework in Frameworks */,
+				BFE839801ADF237A0035CBA1 /* libTwitterKit.a in Frameworks */,
 				AA3E099220119CC000792255 /* MobileCoreServices.framework in Frameworks */,
 				AAF0C9F220119C2C0057F438 /* MapKit.framework in Frameworks */,
 				AAF0C9F120119C0A0057F438 /* CoreLocation.framework in Frameworks */,
@@ -1396,9 +1425,8 @@
 				DB2242681C3F2194008A6DC7 /* Foundation.framework in Frameworks */,
 				DB2242671C3F218F008A6DC7 /* UIKit.framework in Frameworks */,
 				DB2242661C3F2188008A6DC7 /* CoreGraphics.framework in Frameworks */,
+				8C4035FA234094B000B914EF /* WebKit.framework in Frameworks */,
 				DB2242611C3F2181008A6DC7 /* CoreData.framework in Frameworks */,
-				DB22427F1C3F24A2008A6DC7 /* libTwitterCore.a in Frameworks */,
-				BFE839801ADF237A0035CBA1 /* libTwitterKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1408,6 +1436,7 @@
 		208ACAB41FB2800900008F42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C4035F7234094B000B914EF /* WebKit.framework */,
 				AA3E099B20125EC600792255 /* MapKit.framework */,
 				AA3E099120119CA500792255 /* MobileCoreServices.framework */,
 				AAF0C9F020119BED0057F438 /* MapKit.framework */,
@@ -2928,7 +2957,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9D40088C1B1D059D0091E4D3 /* PBXTargetDependency */,
+				8C00431F25453EA000922A4B /* PBXTargetDependency */,
 			);
 			name = "TwitterKit-static";
 			productName = Social;
@@ -2960,9 +2989,16 @@
 		A97654DD18E0B29B00E25169 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = Twitter;
 				TargetAttributes = {
+					8C2EC3FA23AB59240092E1B3 = {
+						ProvisioningStyle = Automatic;
+					};
+					8C4035FF23417D7100B914EF = {
+						CreatedOnToolsVersion = 11.0;
+						ProvisioningStyle = Automatic;
+					};
 					A966541318EB687000B61CEE = {
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Manual;
@@ -2975,12 +3011,13 @@
 			};
 			buildConfigurationList = A97654E018E0B29B00E25169 /* Build configuration list for PBXProject "TwitterKit" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				ko,
 				ja,
+				Base,
 			);
 			mainGroup = A97654DC18E0B29B00E25169;
 			productRefGroup = A97654E618E0B29B00E25169 /* Products */;
@@ -2996,6 +3033,8 @@
 				A97654E418E0B29B00E25169 /* TwitterKit-static */,
 				A966541318EB687000B61CEE /* TwitterKit Tests */,
 				BFE8395F1ADF23590035CBA1 /* TwitterKit */,
+				8C4035FF23417D7100B914EF /* Framework */,
+				8C2EC3FA23AB59240092E1B3 /* Framework-static */,
 			);
 		};
 /* End PBXProject section */
@@ -3087,6 +3126,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8C2EC3FB23AB59240092E1B3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FRAMEWORK_NAME=\"TwitterKit\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos\"\n\nDEVICE_BCSYMBOLMAP_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos\"\n\nDEVICE_DSYM_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework.dSYM\"\nSIMULATOR_DSYM_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework.dSYM\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\nOUTPUT_DIR=\"./TwitterKitStatic-Aggregated\"\n\nxcodebuild -target \"${FRAMEWORK_NAME}-static\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"${FRAMEWORK_NAME}-static\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\nmkdir -p \"${FRAMEWORK}/Headers\"\nmkdir -p \"${FRAMEWORK}/PrivateHeaders\"\n\nrm -rf \"$OUTPUT_DIR\"\nmkdir -p \"$OUTPUT_DIR\"\n\ncp -r \"${DEVICE_LIBRARY_PATH}/Headers/${FRAMEWORK_NAME}\" \"${FRAMEWORK}/Headers\"\ncp -r \"${DEVICE_LIBRARY_PATH}/PrivateHeaders/${FRAMEWORK_NAME}\" \"${FRAMEWORK}/PrivateHeaders\"\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/lib${FRAMEWORK_NAME}.a\" \"${DEVICE_LIBRARY_PATH}/lib${FRAMEWORK_NAME}.a\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\ncp -r \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\n";
+		};
+		8C40360523417DE400B914EF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FRAMEWORK_NAME=\"TwitterKit\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_BCSYMBOLMAP_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos\"\n\nDEVICE_DSYM_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework.dSYM\"\nSIMULATOR_DSYM_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework.dSYM\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\nOUTPUT_DIR=\"./TwitterKit-Aggregated\"\n\nxcodebuild -target \"${FRAMEWORK_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"${FRAMEWORK_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\nrm -rf \"$OUTPUT_DIR\"\nmkdir -p \"$OUTPUT_DIR\"\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\ncp -r \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\n\ncp -r \"${DEVICE_DSYM_PATH}\" \"$OUTPUT_DIR\"\nlipo -create -output \"$OUTPUT_DIR/${FRAMEWORK_NAME}.framework.dSYM/Contents/Resources/DWARF/${FRAMEWORK_NAME}\" \\\n\"${DEVICE_DSYM_PATH}/Contents/Resources/DWARF/${FRAMEWORK_NAME}\" \\\n\"${SIMULATOR_DSYM_PATH}/Contents/Resources/DWARF/${FRAMEWORK_NAME}\" || exit 1\n\nUUIDs=$(dwarfdump --uuid \"${DEVICE_DSYM_PATH}\" | cut -d ' ' -f2)\nfor file in `find \"${DEVICE_BCSYMBOLMAP_PATH}\" -name \"*.bcsymbolmap\" -type f`; do\nfileName=$(basename \"$file\" \".bcsymbolmap\")\nfor UUID in $UUIDs; do\nif [[ \"$UUID\" = \"$fileName\" ]]; then\ncp -R \"$file\" \"$OUTPUT_DIR\"\ndsymutil --symbol-map \"$OUTPUT_DIR\"/\"$fileName\".bcsymbolmap \"$OUTPUT_DIR/${FRAMEWORK_NAME}.framework.dSYM\"\nfi\ndone\ndone\n";
+		};
 		BF61C18E1A4223E900A95933 /* Compile .xib files in TwitterKit.framework Resources Bundle */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3412,10 +3485,10 @@
 			target = A97654E418E0B29B00E25169 /* TwitterKit-static */;
 			targetProxy = 3703BEAE1A37E51B00AA639A /* PBXContainerItemProxy */;
 		};
-		9D40088C1B1D059D0091E4D3 /* PBXTargetDependency */ = {
+		8C00431F25453EA000922A4B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "TwitterCore-static";
-			targetProxy = 9D40088B1B1D059D0091E4D3 /* PBXContainerItemProxy */;
+			name = TwitterCore;
+			targetProxy = 8C00431E25453EA000922A4B /* PBXContainerItemProxy */;
 		};
 		BFE8397F1ADF23700035CBA1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3439,6 +3512,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8C2EC3FD23AB59240092E1B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8C2EC3FE23AB59240092E1B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8C40360123417D7100B914EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8C40360223417D7100B914EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		A966542418EB687000B61CEE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB2241791C3DA603008A6DC7 /* TwitterKitTests.xcconfig */;
@@ -3484,12 +3589,19 @@
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_MODULES_AUTOLINK = NO;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -3514,12 +3626,19 @@
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_MODULES_AUTOLINK = NO;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -3542,6 +3661,7 @@
 			baseConfigurationReference = DB2241761C3DA603008A6DC7 /* libTwitterKit.xcconfig */;
 			buildSettings = {
 				BITCODE_GENERATION_MODE = bitcode;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../vendor",
 					"$(PROJECT_DIR)",
@@ -3555,6 +3675,7 @@
 			baseConfigurationReference = DB2241761C3DA603008A6DC7 /* libTwitterKit.xcconfig */;
 			buildSettings = {
 				BITCODE_GENERATION_MODE = bitcode;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../vendor",
 					"$(PROJECT_DIR)",
@@ -3568,6 +3689,7 @@
 			baseConfigurationReference = 37510DA81D3EC1080048227C /* TwitterKit.xcconfig */;
 			buildSettings = {
 				BITCODE_GENERATION_MODE = bitcode;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "";
 				ENABLE_BITCODE = YES;
 				OTHER_LDFLAGS = (
@@ -3585,6 +3707,7 @@
 			baseConfigurationReference = 37510DA81D3EC1080048227C /* TwitterKit.xcconfig */;
 			buildSettings = {
 				BITCODE_GENERATION_MODE = bitcode;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "";
 				ENABLE_BITCODE = YES;
 				OTHER_LDFLAGS = (
@@ -3600,6 +3723,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8C2EC3FC23AB59240092E1B3 /* Build configuration list for PBXAggregateTarget "Framework-static" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C2EC3FD23AB59240092E1B3 /* Debug */,
+				8C2EC3FE23AB59240092E1B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C40360023417D7100B914EF /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C40360123417D7100B914EF /* Debug */,
+				8C40360223417D7100B914EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A966542318EB687000B61CEE /* Build configuration list for PBXNativeTarget "TwitterKit Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

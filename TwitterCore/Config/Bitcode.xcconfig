@@ -13,7 +13,8 @@ ENABLE_BITCODE_iphonesimulator = NO
 ENABLE_BITCODE_watchsimulator = NO
 ENABLE_BITCODE_appletvsimulator = NO
 
-ENABLE_BITCODE = $(ENABLE_BITCODE_$(PLATFORM_NAME))
+//ENABLE_BITCODE = $(ENABLE_BITCODE_$(PLATFORM_NAME))
+ENABLE_BITCODE = YES
 
 OTHER_CFLAGS[sdk=iphoneos*] = $(inherited) -fembed-bitcode -Wno-error=unused-command-line-argument
 OTHER_CFLAGS[sdk=watchos*] = $(inherited) -fembed-bitcode -Wno-error=unused-command-line-argument

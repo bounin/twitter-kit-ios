@@ -5,7 +5,7 @@
 //  Copyright © 2015 Twitter. All rights reserved.
 //
 
-IPHONEOS_DEPLOYMENT_TARGET = 6.0
+IPHONEOS_DEPLOYMENT_TARGET = 11.0
 
 MACOSX_DEPLOYMENT_TARGET = 10.7
 

@@ -22,7 +22,7 @@ CURRENT_PROJECT_VERSION = 3.2.0
 DYLIB_COMPATIBILITY_VERSION = 1
 DYLIB_CURRENT_VERSION = $(CURRENT_PROJECT_VERSION)
 
-IPHONEOS_DEPLOYMENT_TARGET = 8.0
+IPHONEOS_DEPLOYMENT_TARGET = 11.0
 TVOS_DEPLOYMENT_TARGET = 9.0
 MACOSX_DEPLOYMENT_TARGET = 10.8
 
@@ -41,7 +41,7 @@ GCC_PRECOMPILE_PREFIX_HEADER = YES
 MODULEMAP_FILE = TwitterCore-$(FAB_PRODUCT_BUNDLE_IDENTIFIER_SUFFIX)-module.modulemap
 MODULEMAP_PRIVATE_FILE = TwitterCore-module.private.modulemap
 
-OTHER_LDFLAGS = $(inherited) -ObjC
+OTHER_LDFLAGS = $(inherited) -ObjC -all_load
 OTHER_LDFLAGS[sdk=macosx*] = $(inherited) -framework Cocoa
 OTHER_LDFLAGS[sdk=iphoneos*] = $(inherited) -framework UIKit -framework Social -framework Accounts
 OTHER_LDFLAGS[sdk=iphonesimulator*] = $(inherited) -framework UIKit -framework Social -framework Accounts
